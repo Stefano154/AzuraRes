@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Pastelería Azura</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="images/azura.png" alt="Logo Azura" class="header__logo">
+
+    <nav class="header__nav">
+        <a href="index.html" class="header__link">Inicio</a>
+        <a href="index.html#menu" class="header__link">Menú</a>
+        <a href="index.html#galeria" class="header__link">Galería</a>
+        <a href="index.html#contacto" class="header__link">Contacto</a>
+    </nav>
+</header>
+
+<section id="pedido">
+    <h2>Haz tu Pedido</h2>
+
+    <form class="formulario" action="https://echo.htmlacademy.ru/">
+
+        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+
+        <input type="tel" name="telefono" placeholder="Tu teléfono" required>
+
+        <input type="text" name="direccion" placeholder="Dirección de entrega" required>
+
+        <select name="postre">
+            <option value="">Selecciona un postre</option>
+            <option>Tres Leches</option>
+            <option>Picarones</option>
+            <option>Turrón</option>
+            <option>Alfajores</option>
+            <option>Suspiro Limeño</option>
+            <option>Torta Helada</option>
+        </select>
+
+        <input type="number" name="cantidad" placeholder="Cantidad">
+
+        <textarea name="comentario" placeholder="Comentario adicional"></textarea>
+
+        <button type="submit">Enviar Pedido</button>
+
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 AZURA</p>
+</footer>
+
+</body>
+</html>
