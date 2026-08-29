@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pastelería Azura</title>
-<link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Pastelería Azura</title>
+
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
 <header class="header">
-    <img src="images/azura.png" alt="Logo del Restaurante" class="header__logo">
+    <h1 class="header__title">Pastelería Azura</h1>
 
-    <button class="header__hamburger" id="hamburger" aria-label="Abrir menú">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-    </button>
-
-    <nav class="header__nav" id="nav-menu">
+    <nav class="header__nav">
         <a href="index.html" class="header__link">Inicio</a>
         <a href="menu.html" class="header__link">Menú</a>
         <a href="galeria.html" class="header__link">Galería</a>
@@ -26,20 +21,18 @@
         <a href="pedidos.html" class="hero__button">Haz tu Pedido</a>
     </nav>
 </header>
-<main>
-    <section id="portada" class="hero">
-        <h1 class="hero__title">Bienvenidos a la Pastelería Azura</h1>
-        <a href="#menu" class="hero__button">Ver Menú</a>
-    </section>
 
-    <section id="menu">
-        <h2>Menú</h2>
+<main>
+
+    <section class="menu">
+        <h2 class="section__title">Nuestro Menú</h2>
 
         <div class="menu-grid">
 
             <div class="menu__item">
                 <h3 class="menu__name">Tres Leches</h3>
-                <img src="images/tres leches.jpg" class="menu__image">
+                <img src="images/tres leches.jpg" class="menu__image" alt="Tres Leches">
+
                 <div class="menu__info">
                     <p>Suave, cremoso e irresistible.</p>
                     <span class="menu__price">S/10.90</span>
@@ -48,7 +41,8 @@
 
             <div class="menu__item">
                 <h3 class="menu__name">Picarones</h3>
-                <img src="images/picarones.avif" class="menu__image">
+                <img src="images/picarones.avif" class="menu__image" alt="Picarones">
+
                 <div class="menu__info">
                     <p>Crujientes con miel artesanal.</p>
                     <span class="menu__price">S/12.90</span>
@@ -57,7 +51,8 @@
 
             <div class="menu__item">
                 <h3 class="menu__name">Turrón</h3>
-                <img src="images/turron.jfif" class="menu__image">
+                <img src="images/turron.jfif" class="menu__image" alt="Turrón">
+
                 <div class="menu__info">
                     <p>Dulce tradicional peruano.</p>
                     <span class="menu__price">S/14.90</span>
@@ -66,7 +61,8 @@
 
             <div class="menu__item">
                 <h3 class="menu__name">Alfajores</h3>
-                <img src="images/alfajores.jpg" class="menu__image">
+                <img src="images/alfajores.jpg" class="menu__image" alt="Alfajores">
+
                 <div class="menu__info">
                     <p>Rellenos de manjar blanco.</p>
                     <span class="menu__price">S/18.90</span>
@@ -75,7 +71,8 @@
 
             <div class="menu__item">
                 <h3 class="menu__name">Suspiro Limeño</h3>
-                <img src="images/suspiro limeño.jpg" class="menu__image">
+                <img src="images/suspiro limeño.jpg" class="menu__image" alt="Suspiro Limeño">
+
                 <div class="menu__info">
                     <p>Manjar blanco y merengue.</p>
                     <span class="menu__price">S/13.90</span>
@@ -84,7 +81,8 @@
 
             <div class="menu__item">
                 <h3 class="menu__name">Torta Helada</h3>
-                <img src="images/torta helada.jpg" class="menu__image">
+                <img src="images/torta helada.jpg" class="menu__image" alt="Torta Helada">
+
                 <div class="menu__info">
                     <p>Bizcocho con gelatina y crema.</p>
                     <span class="menu__price">S/16.90</span>
@@ -93,37 +91,12 @@
 
         </div>
     </section>
-    <section id="galeria">
-        <h2>Galería</h2>
 
-        <div class="galeria-grid">
-
-            <img src="images/tres leches.jpg">
-            <img src="images/arroz leche.jpg">
-            <img src="images/turron.jfif">
-            <img src="images/picarones.avif">
-            <img src="images/crema volteada.jpg">
-            <img src="images/alfajores.jpg">
-            <img src="images/queso helado.jfif">
-            <img src="images/suspiro limeño.jpg">
-            <img src="images/cupcake.jfif">
-            <img src="images/torta choco.webp">
-            <img src="images/torta helada.jpg">
-            <img src="images/torta zana.jpg">
-
-        </div>
-    </section>
-
-    <section id="contacto">
-        <h2>Contáctanos</h2>
-        <p>Correo: Azurapostres@gmail.com</p>
-        <p>Teléfono: #########</p>
-    </section>
 </main>
 
-<footer>
-    <p>© 2026 AZURA</p>
+<footer class="footer">
+    <p>© 2026 Pastelería Azura</p>
 </footer>
-<script src="script.js"></script>
+
 </body>
 </html>
