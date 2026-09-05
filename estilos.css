@@ -316,7 +316,6 @@ footer {
         display: flex;
     }
 
-    /* Animación del botón hamburguesa activo */
     .header__hamburger.active .hamburger-line:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -374,7 +373,6 @@ footer {
     }
 }
 
-/* Tablets */
 @media (min-width:768px) and (max-width:1199px) {
     .header__logo {
         width: 140px;
@@ -399,7 +397,6 @@ footer {
     }
 }
 
-/* Escritorios Medianos */
 @media (min-width:1200px) {
     .menu-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -410,7 +407,6 @@ footer {
     }
 }
 
-/* Pantallas Grandes */
 @media (min-width:1400px) {
     .menu-grid,
     .galeria-grid {
@@ -419,5 +415,64 @@ footer {
 
     #portada h1 {
         font-size: 60px;
+    }
+}
+
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 700px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.carrusel__contenedor {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.carrusel__pista {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel__img {
+    min-width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carrusel__btn {
+    background: #0D2B45;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel__btn:hover {
+    background: #C6A75E;
+    transform: scale(1.1);
+}
+
+@media (max-width:767px) {
+    .carrusel__img {
+        height: 250px;
+    }
+    .carrusel__btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 }

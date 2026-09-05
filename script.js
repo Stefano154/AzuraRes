@@ -1,47 +1,72 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ... (Aquí va el código del menú hamburguesa que ya tienes) ...
+    
+    /* ================= 1. MENÚ HAMBURGUESA ================= */
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
 
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Cerrar el menú al hacer clic en un enlace (ideal para móviles)
+        const navLinks = document.querySelectorAll(".header__link");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            });
+        });
+    }
+
+    /* ================= 2. CARRUSEL ================= */
+    const pista = document.getElementById("pista");
+    const btnPrev = document.getElementById("btn-prev");
+    const btnNext = document.getElementById("btn-next");
+
+    if (pista && btnPrev && btnNext) {
+        let index = 0;
+        const imagenes = document.querySelectorAll(".carrusel__img");
+        const totalImagenes = imagenes.length;
+
+        btnNext.addEventListener("click", () => {
+            index = (index + 1) % totalImagenes; // Vuelve al inicio si llega al final
+            pista.style.transform = `translateX(-${index * 100}%)`;
+        });
+
+        btnPrev.addEventListener("click", () => {
+            index = (index - 1 + totalImagenes) % totalImagenes; // Va al final si está en el inicio
+            pista.style.transform = `translateX(-${index * 100}%)`;
+        });
+    }
+
+    /* ================= 3. VALIDACIÓN DEL FORMULARIO ================= */
     const formulario = document.querySelector(".formulario");
 
     if (formulario) {
-        // ... (Aquí va la recuperación de localStorage) ...
-
-        /* ================= 3. VALIDACIÓN DEL TELÉFONO ================= */
         const telefonoInput = formulario.elements["telefono"];
         
-        // 1. Crear el elemento visual para el mensaje de error
         const mensajeError = document.createElement("span");
         mensajeError.textContent = "Error: El teléfono solo debe contener números.";
-        mensajeError.style.color = "#d9534f"; // Color rojo
+        mensajeError.style.color = "#d9534f"; 
         mensajeError.style.fontSize = "14px";
         mensajeError.style.marginTop = "-15px";
         mensajeError.style.marginBottom = "10px";
-        mensajeError.style.display = "none"; // Oculto por defecto
+        mensajeError.style.display = "none"; 
         
-        // Insertamos el mensaje justo después del campo de teléfono
         telefonoInput.after(mensajeError);
 
-        // 2. Interceptar el envío del formulario
         formulario.addEventListener("submit", (evento) => {
             const valorTelefono = telefonoInput.value;
 
-            // La expresión regular /\D/ busca cualquier carácter que NO sea un dígito (0-9)
             if (/\D/.test(valorTelefono)) {
-                
-                evento.preventDefault(); // ¡Detiene el envío del formulario!
-                
-                // Mostrar los estilos de error
+                evento.preventDefault(); 
                 telefonoInput.style.border = "2px solid #d9534f";
                 mensajeError.style.display = "block";
-                
             } else {
-                // Si todo está bien, ocultamos el error (por si el usuario lo corrigió)
                 telefonoInput.style.border = "2px solid #C6A75E";
                 mensajeError.style.display = "none";
-                
-                // Borramos los datos del localStorage ya que el envío fue exitoso
-                const camposGuardados = ["nombre", "telefono", "direccion"];
-                camposGuardados.forEach(campo => localStorage.removeItem(campo));
             }
         });
     }

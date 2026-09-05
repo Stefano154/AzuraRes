@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería - Pastelería Azura</title>
-
     <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
 
+<!-- AQUÍ VA EL HEADER UNIFICADO QUE TE PUSE ARRIBA -->
 <header class="header">
-    <h1 class="header__title">Pastelería Azura</h1>
-
-    <nav class="header__nav">
+    <img src="images/azura.png" alt="Logo del Restaurante" class="header__logo">
+    <button class="header__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    <nav class="header__nav" id="nav-menu">
         <a href="index.html" class="header__link">Inicio</a>
         <a href="menu.html" class="header__link">Menú</a>
         <a href="galeria.html" class="header__link">Galería</a>
@@ -23,34 +26,36 @@
 </header>
 
 <main>
-
     <section class="galeria">
-        <h2 class="section__title">Nuestra Galería</h2>
-
-        <div class="galeria-grid">
-
-            <img src="images/tres leches.jpg" alt="Tres Leches">
-            <img src="images/arroz leche.jpg" alt="Arroz con Leche">
-            <img src="images/turron.jfif" alt="Turrón">
-            <img src="images/picarones.avif" alt="Picarones">
-            <img src="images/crema volteada.jpg" alt="Crema Volteada">
-            <img src="images/alfajores.jpg" alt="Alfajores">
-            <img src="images/queso helado.jfif" alt="Queso Helado">
-            <img src="images/suspiro limeño.jpg" alt="Suspiro Limeño">
-            <img src="images/cupcake.jfif" alt="Cupcake">
-            <img src="images/torta choco.webp" alt="Torta de Chocolate">
-            <img src="images/torta helada.jpg" alt="Torta Helada">
-            <img src="images/torta zana.jpg" alt="Torta de Zanahoria">
-
+        <h2 class="section__title" style="text-align: center; color: #1E4F75;">Nuestra Galería</h2>
+        
+        <!-- CARRUSEL DINÁMICO -->
+        <div class="carrusel">
+            <button id="btn-prev" class="carrusel__btn">&#10094;</button>
+            <div class="carrusel__contenedor">
+                <div class="carrusel__pista" id="pista">
+                    <img src="images/tres leches.jpg" class="carrusel__img" alt="Tres Leches">
+                    <img src="images/arroz leche.jpg" class="carrusel__img" alt="Arroz con Leche">
+                    <img src="images/turron.jfif" class="carrusel__img" alt="Turrón">
+                    <img src="images/picarones.avif" class="carrusel__img" alt="Picarones">
+                    <img src="images/crema volteada.jpg" class="carrusel__img" alt="Crema Volteada">
+                    <img src="images/alfajores.jpg" class="carrusel__img" alt="Alfajores">
+                    <img src="images/Mazzamorra.jpg" class="carrusel__img" alt="Mazamorra Morada">
+                    <img src="images/kingkong.jpg" class="carrusel__img" alt="King Kong">
+                    <img src="images/bolaoro.jpg" class="carrusel__img" alt="Bola de Oro">
+                </div>
+            </div>
+            <button id="btn-next" class="carrusel__btn">&#10095;</button>
         </div>
 
     </section>
-
 </main>
 
 <footer class="footer">
     <p>© 2026 Pastelería Azura</p>
 </footer>
 
+<!-- MUY IMPORTANTE EL SCRIPT AQUÍ -->
+<script src="script.js"></script>
 </body>
 </html>

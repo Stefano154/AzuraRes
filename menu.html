@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú - Pastelería Azura</title>
-
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
+<!-- HEADER UNIFICADO -->
 <header class="header">
-    <h1 class="header__title">Pastelería Azura</h1>
+    <img src="images/azura.png" alt="Logo del Restaurante" class="header__logo">
 
-    <nav class="header__nav">
+    <button class="header__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <nav class="header__nav" id="nav-menu">
         <a href="index.html" class="header__link">Inicio</a>
         <a href="menu.html" class="header__link">Menú</a>
         <a href="galeria.html" class="header__link">Galería</a>
@@ -25,14 +31,14 @@
 <main>
 
     <section class="menu">
-        <h2 class="section__title">Nuestro Menú</h2>
+        <h2 class="section__title" style="text-align: center; color: #1E4F75; margin-bottom: 40px;">Nuestro Menú</h2>
 
         <div class="menu-grid">
 
+            <!-- POSTRES ORIGINALES -->
             <div class="menu__item">
                 <h3 class="menu__name">Tres Leches</h3>
                 <img src="images/tres leches.jpg" class="menu__image" alt="Tres Leches">
-
                 <div class="menu__info">
                     <p>Suave, cremoso e irresistible.</p>
                     <span class="menu__price">S/10.90</span>
@@ -42,7 +48,6 @@
             <div class="menu__item">
                 <h3 class="menu__name">Picarones</h3>
                 <img src="images/picarones.avif" class="menu__image" alt="Picarones">
-
                 <div class="menu__info">
                     <p>Crujientes con miel artesanal.</p>
                     <span class="menu__price">S/12.90</span>
@@ -52,7 +57,6 @@
             <div class="menu__item">
                 <h3 class="menu__name">Turrón</h3>
                 <img src="images/turron.jfif" class="menu__image" alt="Turrón">
-
                 <div class="menu__info">
                     <p>Dulce tradicional peruano.</p>
                     <span class="menu__price">S/14.90</span>
@@ -62,7 +66,6 @@
             <div class="menu__item">
                 <h3 class="menu__name">Alfajores</h3>
                 <img src="images/alfajores.jpg" class="menu__image" alt="Alfajores">
-
                 <div class="menu__info">
                     <p>Rellenos de manjar blanco.</p>
                     <span class="menu__price">S/18.90</span>
@@ -72,7 +75,6 @@
             <div class="menu__item">
                 <h3 class="menu__name">Suspiro Limeño</h3>
                 <img src="images/suspiro limeño.jpg" class="menu__image" alt="Suspiro Limeño">
-
                 <div class="menu__info">
                     <p>Manjar blanco y merengue.</p>
                     <span class="menu__price">S/13.90</span>
@@ -82,10 +84,45 @@
             <div class="menu__item">
                 <h3 class="menu__name">Torta Helada</h3>
                 <img src="images/torta helada.jpg" class="menu__image" alt="Torta Helada">
-
                 <div class="menu__info">
                     <p>Bizcocho con gelatina y crema.</p>
                     <span class="menu__price">S/16.90</span>
+                </div>
+            </div>
+            
+            <div class="menu__item">
+                <h3 class="menu__name">Mazamorra Morada</h3>
+                <img src="images/Mazzamorra.jpg" class="menu__image" alt="Mazamorra Morada">
+                <div class="menu__info">
+                    <p>Clásico limeño de maíz morado.</p>
+                    <span class="menu__price">S/10.90</span>
+                </div>
+            </div>
+
+            <div class="menu__item">
+                <h3 class="menu__name">Arroz con Leche</h3>
+                <img src="images/arroz leche.jpg" class="menu__image" alt="Arroz con Leche">
+                <div class="menu__info">
+                    <p>Clásico, cremoso y reconfortante.</p>
+                    <span class="menu__price">S/10.90</span>
+                </div>
+            </div>
+
+            <div class="menu__item">
+                <h3 class="menu__name">King Kong</h3>
+                <img src="images/kingkong.jpg" class="menu__image" alt="King Kong">
+                <div class="menu__info">
+                    <p>Dulce tradicional norteño en capas.</p>
+                    <span class="menu__price">S/22.90</span>
+                </div>
+            </div>
+
+            <div class="menu__item">
+                <h3 class="menu__name">Bola de Oro</h3>
+                <img src="images/bolaoro.jpg" class="menu__image" alt="Bola de Oro">
+                <div class="menu__info">
+                    <p>Elegante postre colonial de maná.</p>
+                    <span class="menu__price">S/45.90</span>
                 </div>
             </div>
 
@@ -98,5 +135,7 @@
     <p>© 2026 Pastelería Azura</p>
 </footer>
 
+<!-- SCRIPT PARA EL MENÚ HAMBURGUESA -->
+<script src="script.js"></script>
 </body>
 </html>
